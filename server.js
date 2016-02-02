@@ -1,5 +1,7 @@
 var express = require('express');
-var app = expres();
+var app = express();
+
+var port = process.env.PORT || 3000;
 
 exports.start = function(){
     
@@ -9,7 +11,7 @@ exports.start = function(){
         res.send('hello world');
     });
 
-    app.listen(3000, function(){
+    app.listen(port, function(){
     
     console.log('Server running');
     
